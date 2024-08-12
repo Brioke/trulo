@@ -19,7 +19,7 @@ function load_player_stream()
 {
     window.setTimeout(function(){ $("video").fadeIn(); }, 2000);
     let e = document.querySelector("video");
-    let n = "stream.php?id=" + channelID + "&e=.m3u8", o = {};
+    let n = "https://cricsters.io/sliv/stream.php?id=" + channelID + "&e=.m3u8", o = {};
     if(Hls.isSupported())
     {
         let config = { maxMaxBufferLength: 100 };
