@@ -38,11 +38,11 @@ function onUIErrorEvent(errorEvent) {
 }
 
 document.addEventListener('shaka-ui-loaded', function() {
-    initializePlayer('ssc1', 'https://ssc1-enc.edgenextcdn.net/out/v1/c696e4819b55414388a1a487e8a45ca1/index.mpd', {'d84c325f36814f39bbe59080272b10c3': '550727de4c96ef1ecff874905493580f'});
-    initializePlayer('ssc2', 'https://ssc2-enc.edgenextcdn.net/out/v1/a16db2ec338a445a82d9c541cc9293f9/index.mpd', {'8bcfc55359e24bd7ad1c5560a96ddd3c': 'b5dcf721ab522af92a9d3bf0bd55b596'});
-    initializePlayer('ssc3', 'https://ssc3-enc.edgenextcdn.net/out/v1/42e86125555242aaa2a12056832e7814/index.mpd', {'7de5dd08ad8041d586c2f16ccc9490a1': '5e1503f3398b34f5099933fedab847ef'});
-    initializePlayer('ssc4', 'https://ssc4-enc.edgenextcdn.net/out/v1/5267ea5772874b0db24559d643eaad93/index.mpd', {'5c672f6b85a94638872d0214f7806ed4': 'bf8756fbb866ee2d5c701c2289dd8de3'});
-    initializePlayer('ssc5', 'https://ssc5-enc.edgenextcdn.net/out/v1/99289eac5a7b4319905da595afbd792b/index.mpd', {'c88b512b17ab4f6cb09eb0ff4a1056ed': 'adc08ee1c20a734972a55c9aebbd1888'});
+    initializePlayer('ssc1', 'https://ssc-1-enc.edgenextcdn.net/out/v1/c696e4819b55414388a1a487e8a45ca1/index.mpd', {'d84c325f36814f39bbe59080272b10c3': '550727de4c96ef1ecff874905493580f'});
+    initializePlayer('ssc2', 'https://ssc-2-enc.edgenextcdn.net/out/v1/a16db2ec338a445a82d9c541cc9293f9/index.mpd', {'8bcfc55359e24bd7ad1c5560a96ddd3c': 'b5dcf721ab522af92a9d3bf0bd55b596'});
+    initializePlayer('ssc3', 'https://ssc-3-enc.edgenextcdn.net/out/v1/42e86125555242aaa2a12056832e7814/index.mpd', {'7de5dd08ad8041d586c2f16ccc9490a1': '5e1503f3398b34f5099933fedab847ef'});
+    initializePlayer('ssc4', 'https://ssc-4-enc.edgenextcdn.net/out/v1/5267ea5772874b0db24559d643eaad93/index.mpd', {'5c672f6b85a94638872d0214f7806ed4': 'bf8756fbb866ee2d5c701c2289dd8de3'});
+    initializePlayer('ssc5', 'https://ssc-5-enc.edgenextcdn.net/out/v1/99289eac5a7b4319905da595afbd792b/index.mpd', {'c88b512b17ab4f6cb09eb0ff4a1056ed': 'adc08ee1c20a734972a55c9aebbd1888'});
     
 initializePlayer('ssc_extra1', 'https://ssc-extra1-enc.edgenextcdn.net/out/v1/647c58693f1d46af92bd7e69f17912cb/index.mpd', {'ecbc9e6fe6b145efb6658fb5cf7427f8': '03c17e28911f71221acbc0b11f900401'});
 
