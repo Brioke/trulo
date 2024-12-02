@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="referrer" content="same-origin">
+<title>LSBTV - STREAMING GRATIS, GRATIS STREAMING</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/gaya.css" />
+<script src="https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/fullscreen.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/aspekrasio.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/Arjunaaaaa/lsbtv/popupwindow.js" crossorigin="anonymous"></script>
+<style>
+  .konten-atas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .konten-bawah {
+    position: relative;
+  }
+  .vidio {
+    margin-top: -8px;
+  }
+  #offline-message {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  .iframe {
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+</style>
+<script>
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
+
+  window.addEventListener('load', function() {
+    var online = navigator.onLine;
+
+    function updateStatus() {
+      var offlineMessage = document.getElementById('offline-message');
+      var iframe = document.getElementById('vidio');
+      offlineMessage.style.display = online ? 'none' : 'block';
+      iframe.style.display = online ? 'block' : 'none';
+    }
+
+    // Set iframe source based on 'id' query parameter
+    var id = getQueryParam('id');
+    if (id) {
+      var iframe = document.getElementById('vidio');
+      iframe.src = `https://${id}.blogspot.com?m=2`;
+    } else {
+      alert('Parameter ID tidak ditemukan!');
+    }
+
+    updateStatus();
+
+    window.addEventListener('online', function() {
+      online = true;
+      updateStatus();
+    });
+
+    window.addEventListener('offline', function() {
+      online = false;
+      updateStatus();
+    });
+  });
+</script>
+</head>
+<body bgcolor="black" style="margin:0" oncontextmenu="return false" onkeydown="return false" onmousedown="return false">
+<div class="konten-bawah">
+  <iframe class="vidio" id="vidio" width="100%" height="100%" 
+    title="Lsbt" sandbox="allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" 
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+    allowfullscreen></iframe>
+</div>
+<div class="konten-atas">
+  <marquee bgcolor="black" style="color: black; font-family: arial; font-size: 20px;"></marquee>
+</div>
+<div id="offline-message">
+  <h2>Anda sedang offline</h2>
+  <p>Silakan periksa koneksi internet Anda.</p>
+</div>
+</body>
+</html>
